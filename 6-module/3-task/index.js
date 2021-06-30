@@ -3,6 +3,7 @@ import createElement from '../../assets/lib/create-element.js';
 export default class Carousel {
   constructor(slides) {
     this.slides = slides;
+<<<<<<< HEAD
 
     const div = document.createElement('div');
     div.classList.add('carousel');
@@ -110,5 +111,7 @@ export default class Carousel {
         sliderRightArrow.style.display = '';
       }
     });
+=======
+>>>>>>> 4422748ff8b6c7220db35d0224988455497ede49
   }
 }
