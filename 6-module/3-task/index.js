@@ -82,14 +82,13 @@ export default class Carousel {
     let elemToMove = div.querySelector('.carousel__inner');
     sliderLeftArrow.style.display = 'none';
 
-
     sliderLeftArrow.addEventListener('click', () => {
       currentSliderPosition--;
       const offset = -elemToMove.offsetWidth * currentSliderPosition;
       elemToMove.style.transform = `translateX(${offset}px)`;
       if (currentSliderPosition === 0) {
         sliderLeftArrow.style.display = 'none';
-      } else if (currentSliderPosition === 3) {
+      } else if (currentSliderPosition === (this.slides.length - 1)) {
         sliderRightArrow.style.display = 'none';
       } else {
         sliderLeftArrow.style.display = '';
@@ -104,7 +103,7 @@ export default class Carousel {
       elemToMove.style.transform = `translateX(${offset}px)`;
       if (currentSliderPosition === 0) {
         sliderLeftArrow.style.display = 'none';
-      } else if (currentSliderPosition === 3) {
+      } else if (currentSliderPosition === (this.slides.length - 1)) {
         sliderRightArrow.style.display = 'none';
       } else {
         sliderLeftArrow.style.display = '';
